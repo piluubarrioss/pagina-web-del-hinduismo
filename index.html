@@ -1,0 +1,375 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dioses y Figuras de la India</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header class="header">
+        <nav class="navbar">
+
+            <div class="logo">
+                🪷 <span>Dioses de la India</span>
+            </div>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#figuras">Figuras</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#sobre">Sobre el proyecto</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">CULTURA Y ESPIRITUALIDAD</p>
+
+            <h1>
+                Dioses y figuras
+                <span>de la India</span>
+            </h1>
+
+            <p>
+                Un recorrido por algunas de las figuras más conocidas
+                de la cultura y las tradiciones de la India.
+            </p>
+
+            <a href="#figuras" class="btn">
+                Explorar ✦
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCCIÓN -->
+    <section class="intro">
+
+        <div class="section-title">
+            <span>✦</span>
+            <h2>Conociendo estas figuras</h2>
+            <span>✦</span>
+        </div>
+
+        <p>
+            La cultura de la India posee una gran diversidad de tradiciones,
+            símbolos y figuras espirituales. En esta página podemos conocer
+            algunas de las más representativas y descubrir brevemente
+            qué significan y cómo son representadas.
+        </p>
+
+    </section>
+
+
+    <!-- FIGURAS PRINCIPALES -->
+    <section id="figuras" class="figuras">
+
+        <div class="section-heading">
+            <p>FIGURAS DESTACADAS</p>
+            <h2>Conocé sus historias</h2>
+        </div>
+
+
+        <div class="cards-container">
+
+            <!-- BUDA -->
+            <article class="card">
+
+                <div class="card-image">
+                    <img src="budda.jpeg" alt="Buda">
+                </div>
+
+                <div class="card-content">
+
+                    <span class="number">01</span>
+
+                    <h3>Buda</h3>
+
+                    <p>
+                        Siddhartha Gautama, conocido como Buda,
+                        fue un maestro espiritual cuyas enseñanzas
+                        dieron origen al budismo.
+                    </p>
+
+                    <button class="info-btn" onclick="mostrarInfo('buda')">
+                        Leer más
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- BU DAI -->
+            <article class="card">
+
+                <div class="card-image">
+                    <img src="budai.jpeg" alt="Bu Dai">
+                </div>
+
+                <div class="card-content">
+
+                    <span class="number">02</span>
+
+                    <h3>Bu Dai</h3>
+
+                    <p>
+                        Bu Dai es una figura tradicional del budismo
+                        chino, conocida por su apariencia alegre y
+                        su gran sonrisa.
+                    </p>
+
+                    <button class="info-btn" onclick="mostrarInfo('budai')">
+                        Leer más
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- GANESHA -->
+            <article class="card">
+
+                <div class="card-image">
+                    <img src="ganesha.jpeg" alt="Ganesha">
+                </div>
+
+                <div class="card-content">
+
+                    <span class="number">03</span>
+
+                    <h3>Ganesha</h3>
+
+                    <p>
+                        Ganesha es una de las deidades más reconocidas
+                        del hinduismo y se caracteriza por su cabeza
+                        de elefante.
+                    </p>
+
+                    <button class="info-btn" onclick="mostrarInfo('ganesha')">
+                        Leer más
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- KALI -->
+            <article class="card">
+
+                <div class="card-image">
+                    <img src="WhatsApp Image 2026-10-02 at 10.40.38 AM.jpeg" alt="Kali">
+                </div>
+
+                <div class="card-content">
+
+                    <span class="number">04</span>
+
+                    <h3>Kali</h3>
+
+                    <p>
+                        Kali es una importante diosa del hinduismo,
+                        relacionada con el tiempo, la transformación
+                        y la destrucción de lo negativo.
+                    </p>
+
+                    <button class="info-btn" onclick="mostrarInfo('kali')">
+                        Leer más
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- VENTANA DE INFORMACIÓN -->
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="cerrarInfo()">×</button>
+
+            <span id="modalNumber"></span>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalText"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="gallery-section">
+
+        <div class="section-heading">
+
+            <p>GALERÍA</p>
+
+            <h2>Otras figuras de la tradición hindú</h2>
+
+            <span>
+                Explorá algunas otras figuras conocidas de esta cultura.
+            </span>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="imagenes/shiva.jpg" alt="Shiva">
+                <div class="gallery-caption">
+                    <h3>Shiva</h3>
+                    <p>Una de las principales deidades del hinduismo.</p>
+                </div>
+            </div>
+
+
+            <div class="gallery-item">
+                <img src="vishnu.jpeg" alt="Vishnu">
+                <div class="gallery-caption">
+                    <h3>Vishnu</h3>
+                    <p>Asociado con la preservación y protección.</p>
+                </div>
+            </div>
+
+
+            <div class="gallery-item">
+                <img src="brahma.jpeg" alt="Brahma">
+                <div class="gallery-caption">
+                    <h3>Brahma</h3>
+                    <p>Relacionado tradicionalmente con la creación.</p>
+                </div>
+            </div>
+
+
+            <div class="gallery-item">
+                <img src="WhatsApp Image 2026-10-02 at 10.40.33 AM.jpeg" alt="Lakshmi">
+                <div class="gallery-caption">
+                    <h3>Lakshmi</h3>
+                    <p>Asociada con la prosperidad y la buena fortuna.</p>
+                </div>
+            </div>
+
+
+            <div class="gallery-item">
+                <img src="saraswati.jpeg" alt="Saraswati">
+                <div class="gallery-caption">
+                    <h3>Saraswati</h3>
+                    <p>Relacionada con el conocimiento y las artes.</p>
+                </div>
+            </div>
+
+
+            <div class="gallery-item">
+                <img src="parvati.jpeg" alt="Parvati">
+                <div class="gallery-caption">
+                    <h3>Parvati</h3>
+                    <p>Una importante diosa de la tradición hinduista.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="significados" id="significados">
+    <h2>Significado de cada figura</h2>
+    <p>Conocé el significado de los elementos que representa cada figura.</p>
+
+    <div class="significado-item">
+        <h3>Buda</h3>
+        <img src="significado budda.jpeg" alt="Significado de Buda">
+    </div>
+
+    <div class="significado-item">
+        <h3>Bu Dai</h3>
+        <img src="significado  budi.jpeg" alt="Significado de Bu Dai">
+    </div>
+
+    <div class="significado-item">
+        <h3>Ganesha</h3>
+        <img src="significado ganesha.jpeg" alt="Significado de Ganesha">
+    </div>
+
+    <div class="significado-item">
+        <h3>Kali</h3>
+        <img src="significado kali.jpeg" alt="Significado de Kali">
+    </div>
+</section>
+
+
+    <!-- SOBRE EL PROYECTO -->
+    <section id="sobre" class="about">
+
+        <div class="about-box">
+
+            <div class="lotus">🪷</div>
+
+            <h2>Sobre este proyecto</h2>
+
+            <p>
+                Esta página fue creada como proyecto escolar para
+                aprender cómo funciona una página web y cómo se
+                relacionan elementos como HTML, CSS, JavaScript,
+                navegador, servidor y localhost.
+            </p>
+
+            <p>
+                El contenido presenta información general sobre
+                algunas figuras relacionadas con las tradiciones
+                budistas e hinduistas.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🪷 Dioses de la India
+        </div>
+
+        <p>
+            Proyecto escolar · 5to 2da
+        </p>
+
+        <p class="copyright">
+            © 2026 - Página educativa
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
